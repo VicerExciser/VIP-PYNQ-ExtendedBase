@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="197360fs"></ZoomStartTime>
+      <ZoomEndTime time="203151fs"></ZoomEndTime>
+      <Cursor1Time time="204000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="vbus" fp_name="vbus18">
+      <obj_property name="label">axi_wr_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="u_ila_0_ps7_0_axi_periph_M10_AXI_WDATA">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">u_ila_0_ps7_0_axi_periph_M10_AXI_WDATA[31:2]</obj_property>
+         <obj_property name="ObjectShortName">u_ila_0_ps7_0_axi_periph_M10_AXI_WDATA[31:2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="system_i/ps7_0_axi_periph_M10_AXI_WDATA">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">system_i/ps7_0_axi_periph_M10_AXI_WDATA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ps7_0_axi_periph_M10_AXI_WDATA[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="system_i/in_ow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">system_i/in_ow</obj_property>
+      <obj_property name="ObjectShortName">in_ow</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">in_ow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="system_i/out_ow">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">system_i/out_ow</obj_property>
+      <obj_property name="ObjectShortName">out_ow</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">out_ow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_0_rst_ps7_0_fclk0_peripheral_aresetn">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_rst_ps7_0_fclk0_peripheral_aresetn</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_rst_ps7_0_fclk0_peripheral_aresetn</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="system_i/ps7_0_axi_periph_M10_AXI_AWADDR">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">system_i/ps7_0_axi_periph_M10_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ps7_0_axi_periph_M10_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">axi_wr_address</obj_property>
+   </wvobject>
+</wave_config>

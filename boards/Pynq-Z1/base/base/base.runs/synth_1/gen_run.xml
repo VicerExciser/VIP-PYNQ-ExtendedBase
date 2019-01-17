@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1544148590">
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../vivado/top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../vivado/constraints/top.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../vivado/constraints/top.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="system_xlslice_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ck_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_arduino_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_spi_shared_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timers_interrupt_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_pwm_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_generate_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xadc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_concat_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_spi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_io_switch_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_concat_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_dff_en_reset_vector_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_lmb_bram_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xlconcat_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_io_switch_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_dff_en_reset_vector_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_logic_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_constant_tkeep_tstrb_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_trace_cntrl_32_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_logic_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axis_data_fifo_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_constant_tkeep_tstrb_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rgbleds_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_dvi2rgb_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_color_swap_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_io_switch_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_color_convert_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axis_register_slice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_constant_8bit_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_arduino_reset_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_logic_1_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_arduino_intr_ack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_concat_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_iop_interrupts_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axis_register_slice_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_color_convert_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_pmodb_intr_ack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_intr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_pmoda_intr_ack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb3_timer_capture_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_pmoda_reset_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mb_iop_pmodb_reset_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_dff_en_reset_vector_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_vdma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_proc_sys_reset_pixelclk_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_timer_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_pixel_pack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_logic_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rgb2dvi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_trace_cntrl_64_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_hdmi_out_hpd_video_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_color_swap_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_dma_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_dynclk_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_spi_direct_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_hdmiin_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_pixel_unpack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_concat_pmoda_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_leds_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_concat_interrupts_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_concat_arduino_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_ps7_0_fclk3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_switches_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_spi_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_audio_direct_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_constant_10bit_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_proc_sys_reset_fclk1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_audio_path_sel_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_btns_gpio_0"/>
+</GenRun>

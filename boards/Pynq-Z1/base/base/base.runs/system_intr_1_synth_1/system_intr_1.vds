@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Oct 18 15:27:29 2018
+# Process ID: 21610
+# Current directory: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_intr_1_synth_1
+# Command line: vivado -log system_intr_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_intr_1.tcl
+# Log file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_intr_1_synth_1/system_intr_1.vds
+# Journal file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_intr_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_intr_1.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_intr_1, cache-ID = 3e4c2302b13fe9e6.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 18 15:27:54 2018...

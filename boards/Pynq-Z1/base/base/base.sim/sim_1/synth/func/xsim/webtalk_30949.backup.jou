@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov 29 09:55:18 2018
+# Process ID: 30949
+# Current directory: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.sim/sim_1/synth/func/xsim
+# Command line: wbtcv -mode batch -source /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.sim/sim_1/synth/func/xsim/xsim.dir/top_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.sim/sim_1/synth/func/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.sim/sim_1/synth/func/xsim/xsim.dir/top_func_synth/webtalk/xsim_webtalk.tcl -notrace

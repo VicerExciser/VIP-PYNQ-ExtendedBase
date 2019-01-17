@@ -1,0 +1,538 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Oct 18 14:06:04 2018
+# Process ID: 9318
+# Current directory: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_audio_direct_0_0_synth_1
+# Command line: vivado -log system_audio_direct_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_audio_direct_0_0.tcl
+# Log file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_audio_direct_0_0_synth_1/system_audio_direct_0_0.vds
+# Journal file: /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_audio_direct_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_audio_direct_0_0.tcl -notrace
+Command: synth_design -top system_audio_direct_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9397 
+WARNING: [Synth 8-2611] redeclaration of ansi port dout is not allowed [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmDes.v:26]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1309.059 ; gain = 96.277 ; free physical = 709 ; free virtual = 11313
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_audio_direct_0_0' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ip/system_audio_direct_0_0/synth/system_audio_direct_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'audio_direct_v1_1' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/hdl/audio_direct_v1_1.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'd_axi_pdm_v1_2_S_AXI' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/d_axi_pdm_v1_2_S_AXI.vhd:97]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'pdm_rxtx' declared at '/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:23' bound to instance 'Inst_PdmCtl' of component 'pdm_rxtx' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/d_axi_pdm_v1_2_S_AXI.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'pdm_rxtx' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:62]
+	Parameter C_NR_OF_BITS bound to: 16 - type: integer 
+	Parameter C_SYS_CLK_FREQ_MHZ bound to: 100 - type: integer 
+	Parameter C_PDM_FREQ_MHZ bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'pdm_des' declared at '/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_des.vhd:34' bound to instance 'Inst_Deserializer' of component 'pdm_des' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'pdm_des' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_des.vhd:55]
+	Parameter C_NR_OF_BITS bound to: 16 - type: integer 
+	Parameter C_SYS_CLK_FREQ_MHZ bound to: 100 - type: integer 
+	Parameter C_PDM_FREQ_MHZ bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'pdm_des' (1#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_des.vhd:55]
+	Parameter C_NR_OF_BITS bound to: 16 - type: integer 
+	Parameter C_SYS_CLK_FREQ_MHZ bound to: 100 - type: integer 
+	Parameter C_PDM_FREQ_MHZ bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'pdm_ser' declared at '/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_ser.vhd:34' bound to instance 'Inst_Serializer' of component 'pdm_ser' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'pdm_ser' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_ser.vhd:56]
+	Parameter C_NR_OF_BITS bound to: 16 - type: integer 
+	Parameter C_SYS_CLK_FREQ_MHZ bound to: 100 - type: integer 
+	Parameter C_PDM_FREQ_MHZ bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'pdm_ser' (2#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_ser.vhd:56]
+INFO: [Synth 8-637] synthesizing blackbox instance 'Inst_PdmTxFifo' of component 'fifo_512' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:210]
+INFO: [Synth 8-637] synthesizing blackbox instance 'Inst_PdmRxFifo' of component 'fifo_512' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:226]
+INFO: [Synth 8-226] default block is never used [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:254]
+INFO: [Synth 8-256] done synthesizing module 'pdm_rxtx' (3#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_rxtx.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/d_axi_pdm_v1_2_S_AXI.vhd:308]
+INFO: [Synth 8-256] done synthesizing module 'd_axi_pdm_v1_2_S_AXI' (4#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/d_axi_pdm_v1_2_S_AXI.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'audio_direct_path' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/audio_direct_path.v:11]
+INFO: [Synth 8-638] synthesizing module 'PdmDes' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmDes.v:11]
+	Parameter C_PDM_FREQ_HZ bound to: 2000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PdmDes' (5#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmDes.v:11]
+WARNING: [Synth 8-350] instance 'PdmDes_Inst' of module 'PdmDes' requires 6 connections, but only 5 given [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/audio_direct_path.v:29]
+INFO: [Synth 8-638] synthesizing module 'PdmSer' [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmSer.v:11]
+INFO: [Synth 8-256] done synthesizing module 'PdmSer' (6#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmSer.v:11]
+WARNING: [Synth 8-3848] Net PdmDes_done in module/entity audio_direct_path does not have driver. [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/audio_direct_path.v:21]
+INFO: [Synth 8-256] done synthesizing module 'audio_direct_path' (7#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/audio_direct_path.v:11]
+WARNING: [Synth 8-3848] Net pwm_audio_i in module/entity audio_direct_v1_1 does not have driver. [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/hdl/audio_direct_v1_1.v:54]
+INFO: [Synth 8-256] done synthesizing module 'audio_direct_v1_1' (8#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/hdl/audio_direct_v1_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'system_audio_direct_0_0' (9#1) [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ip/system_audio_direct_0_0/synth/system_audio_direct_0_0.v:57]
+WARNING: [Synth 8-3331] design pdm_ser has unconnected port pwm_audio_i
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design d_axi_pdm_v1_2_S_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1338.309 ; gain = 125.527 ; free physical = 675 ; free virtual = 11278
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin d_axi_pdm_v1_2_S_AXI_inst:pwm_audio_i to constant 0 [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/hdl/audio_direct_v1_1.v:60]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1338.309 ; gain = 125.527 ; free physical = 611 ; free virtual = 11214
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1680.324 ; gain = 0.000 ; free physical = 928 ; free virtual = 11535
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:01:19 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 743 ; free virtual = 11338
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:01:19 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 742 ; free virtual = 11337
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:19 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 734 ; free virtual = 11329
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "done_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_clk_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_des.vhd:121]
+INFO: [Synth 8-5546] ROM "done_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_clk_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_ser.vhd:131]
+INFO: [Synth 8-5544] ROM "TxEn" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RxEn" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "cnt_bits" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_int" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pdm_clk_rising" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt_bits" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "done_int" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pdm_clk_rising" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:01:21 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 729 ; free virtual = 11324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 11    
+	               16 Bit    Registers := 7     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pdm_des 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module pdm_ser 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module pdm_rxtx 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module d_axi_pdm_v1_2_S_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 7     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+Module PdmDes 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module PdmSer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module audio_direct_path 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module audio_direct_v1_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element inst/audio_direct_path_inst/PdmDes_Inst/done_int_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmDes.v:30]
+WARNING: [Synth 8-6014] Unused sequential element inst/audio_direct_path_inst/PdmSer_Inst/done_int_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/PdmSer.v:27]
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmDes_Inst/cnt_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmDes_Inst/pdm_clk_rising" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmDes_Inst/clk_int" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmDes_Inst/cnt_bits" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmSer_Inst/cnt_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmSer_Inst/pdm_clk_rising" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmSer_Inst/cnt_bits" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inst/audio_direct_path_inst/PdmSer_Inst/done_int" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element inst/d_axi_pdm_v1_2_S_AXI_inst/Inst_PdmCtl/Inst_Deserializer/cnt_clk_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_des.vhd:121]
+WARNING: [Synth 8-6014] Unused sequential element inst/d_axi_pdm_v1_2_S_AXI_inst/Inst_PdmCtl/Inst_Serializer/cnt_clk_reg was removed.  [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ipshared/0403/src/pdm_ser.vhd:131]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_awprot[2]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_awprot[1]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_awprot[0]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_arprot[2]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_arprot[1]
+WARNING: [Synth 8-3331] design system_audio_direct_0_0 has unconnected port s_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[16]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[17]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[18] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[18]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[19] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[19]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[20] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[20]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[21] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[21]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[22] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[22]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[23] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[23]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[24] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[24]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[25] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[25]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[26] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[26]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[27] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[27]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[28] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[28]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[29] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[29]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[30] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[30]' (FDR) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/d_axi_pdm_v1_2_S_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/d_axi_pdm_v1_2_S_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/d_axi_pdm_v1_2_S_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/audio_direct_path_inst/en_i_sync_reg )
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_DATA_OUT_REG_reg[31]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[31]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[30]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[29]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[28]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[27]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[26]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[25]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[24]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[23]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[22]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[21]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[20]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[19]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[18]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[15]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[14]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[13]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[12]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[11]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[10]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[9]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[8]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[7]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[6]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[5]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[4]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[3]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/PDM_STATUS_REG_reg[2]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/audio_direct_path_inst/en_i_sync_reg) is unused and will be removed from module system_audio_direct_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:26 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 729 ; free virtual = 11336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:45 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 457 ; free virtual = 11064
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:45 . Memory (MB): peak = 1680.324 ; gain = 467.543 ; free physical = 460 ; free virtual = 11066
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/Inst_PdmCtl/Inst_Deserializer/cnt_bits_reg[4]) is unused and will be removed from module system_audio_direct_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/d_axi_pdm_v1_2_S_AXI_inst/Inst_PdmCtl/Inst_Serializer/cnt_bits_reg[4]) is unused and will be removed from module system_audio_direct_0_0.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:46 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 504 ; free virtual = 11110
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1025 ; free virtual = 11631
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1025 ; free virtual = 11631
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1023 ; free virtual = 11630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1023 ; free virtual = 11630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1022 ; free virtual = 11629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1022 ; free virtual = 11629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |fifo_512      |         2|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |fifo_512_bbox_1 |     1|
+|2     |fifo_512_bbox_2 |     1|
+|3     |CARRY4          |    32|
+|4     |LUT1            |    10|
+|5     |LUT2            |    26|
+|6     |LUT3            |    11|
+|7     |LUT4            |    38|
+|8     |LUT5            |   146|
+|9     |LUT6            |    77|
+|10    |FDRE            |   470|
+|11    |FDSE            |     3|
++------+----------------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------------+------+
+|      |Instance                      |Module               |Cells |
++------+------------------------------+---------------------+------+
+|1     |top                           |                     |   849|
+|2     |  inst                        |audio_direct_v1_1    |   849|
+|3     |    audio_direct_path_inst    |audio_direct_path    |   385|
+|4     |      PdmDes_Inst             |PdmDes               |   172|
+|5     |      PdmSer_Inst             |PdmSer               |   197|
+|6     |    d_axi_pdm_v1_2_S_AXI_inst |d_axi_pdm_v1_2_S_AXI |   464|
+|7     |      Inst_PdmCtl             |pdm_rxtx             |   178|
+|8     |        Inst_Deserializer     |pdm_des              |    63|
+|9     |        Inst_Serializer       |pdm_ser              |    63|
++------+------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.332 ; gain = 475.551 ; free physical = 1022 ; free virtual = 11629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 1688.332 ; gain = 133.535 ; free physical = 1074 ; free virtual = 11681
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:47 . Memory (MB): peak = 1688.340 ; gain = 475.551 ; free physical = 1081 ; free virtual = 11688
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ip/system_audio_direct_0_0/src/fifo_512.edif]
+Finished Parsing EDIF File [/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ip/system_audio_direct_0_0/src/fifo_512.edif]
+INFO: [Netlist 29-17] Analyzing 336 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 192 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 160 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:51 . Memory (MB): peak = 1695.332 ; gain = 507.379 ; free physical = 1038 ; free virtual = 11645
+INFO: [Common 17-1381] The checkpoint '/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_audio_direct_0_0_synth_1/system_audio_direct_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.srcs/sources_1/bd/system/ip/system_audio_direct_0_0/system_audio_direct_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 26 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/bmull/PYNQ/boards/Pynq-Z1/base/base/base.runs/system_audio_direct_0_0_synth_1/system_audio_direct_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_audio_direct_0_0_utilization_synth.rpt -pb system_audio_direct_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.33 . Memory (MB): peak = 1719.344 ; gain = 0.000 ; free physical = 980 ; free virtual = 11589
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 18 14:08:19 2018...

@@ -1,0 +1,482 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Dec  6 21:26:10 2018
+| Host         : bmull-thinkpad-l540 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+| Design       : top
+| Device       : 7z020clg400-1
+| Design State : Fully Placed
+---------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++----------------------------+-------+-------+-----------+-------+
+|          Site Type         |  Used | Fixed | Available | Util% |
++----------------------------+-------+-------+-----------+-------+
+| Slice LUTs                 | 35222 |     0 |     53200 | 66.21 |
+|   LUT as Logic             | 32838 |     0 |     53200 | 61.73 |
+|   LUT as Memory            |  2384 |     0 |     17400 | 13.70 |
+|     LUT as Distributed RAM |  1172 |     0 |           |       |
+|     LUT as Shift Register  |  1212 |     0 |           |       |
+| Slice Registers            | 49635 |     9 |    106400 | 46.65 |
+|   Register as Flip Flop    | 49632 |     9 |    106400 | 46.65 |
+|   Register as Latch        |     0 |     0 |    106400 |  0.00 |
+|   Register as AND/OR       |     3 |     0 |    106400 | <0.01 |
+| F7 Muxes                   |   919 |     0 |     26600 |  3.45 |
+| F8 Muxes                   |   121 |     0 |     13300 |  0.91 |
++----------------------------+-------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 3     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 343   |          Yes |           - |          Set |
+| 1167  |          Yes |           - |        Reset |
+| 1552  |          Yes |         Set |            - |
+| 46573 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------+-------+-------+-----------+-------+
+|                 Site Type                 |  Used | Fixed | Available | Util% |
++-------------------------------------------+-------+-------+-----------+-------+
+| Slice                                     | 12923 |     0 |     13300 | 97.17 |
+|   SLICEL                                  |  8704 |     0 |           |       |
+|   SLICEM                                  |  4219 |     0 |           |       |
+| LUT as Logic                              | 32838 |     0 |     53200 | 61.73 |
+|   using O5 output only                    |     5 |       |           |       |
+|   using O6 output only                    | 25887 |       |           |       |
+|   using O5 and O6                         |  6946 |       |           |       |
+| LUT as Memory                             |  2384 |     0 |     17400 | 13.70 |
+|   LUT as Distributed RAM                  |  1172 |     0 |           |       |
+|     using O5 output only                  |     0 |       |           |       |
+|     using O6 output only                  |   852 |       |           |       |
+|     using O5 and O6                       |   320 |       |           |       |
+|   LUT as Shift Register                   |  1212 |     0 |           |       |
+|     using O5 output only                  |    39 |       |           |       |
+|     using O6 output only                  |   770 |       |           |       |
+|     using O5 and O6                       |   403 |       |           |       |
+| LUT Flip Flop Pairs                       | 16720 |     0 |     53200 | 31.43 |
+|   fully used LUT-FF pairs                 |  4041 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 12147 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 10167 |       |           |       |
+| Unique Control Sets                       |  2507 |       |           |       |
++-------------------------------------------+-------+-------+-----------+-------+
+* Note: Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |   63 |     0 |       140 | 45.00 |
+|   RAMB36/FIFO*    |   61 |     0 |       140 | 43.57 |
+|     RAMB36E1 only |   61 |       |           |       |
+|   RAMB18          |    4 |     0 |       280 |  1.43 |
+|     RAMB18E1 only |    4 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   18 |     0 |       220 |  8.18 |
+|   DSP48E1 only |   18 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+--------+
+|          Site Type          | Used | Fixed | Available |  Util% |
++-----------------------------+------+-------+-----------+--------+
+| Bonded IOB                  |  118 |   118 |       125 |  94.40 |
+|   IOB Master Pads           |   57 |       |           |        |
+|   IOB Slave Pads            |   58 |       |           |        |
+|   IOB Flip Flops            |    3 |     3 |           |        |
+| Bonded IPADs                |    2 |     2 |         2 | 100.00 |
+| Bonded IOPADs               |  130 |   130 |       130 | 100.00 |
+| PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
+| PHASER_REF                  |    0 |     0 |         4 |   0.00 |
+| OUT_FIFO                    |    0 |     0 |        16 |   0.00 |
+| IN_FIFO                     |    0 |     0 |        16 |   0.00 |
+| IDELAYCTRL                  |    1 |     0 |         4 |  25.00 |
+| IBUFDS                      |    4 |     4 |       121 |   3.31 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        16 |   0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        16 |   0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    3 |     3 |       200 |   1.50 |
+|   IDELAYE2 only             |    3 |     3 |           |        |
+| ILOGIC                      |    8 |     8 |       125 |   6.40 |
+|   IFF_Register              |    2 |     2 |           |        |
+|   ISERDES                   |    6 |     6 |           |        |
+| OLOGIC                      |    9 |     9 |       125 |   7.20 |
+|   OUTFF_Register            |    1 |     1 |           |        |
+|   OSERDES                   |    8 |     8 |           |        |
++-----------------------------+------+-------+-----------+--------+
+
+
+6. Clocking
+-----------
+
++--------------+------+-------+-----------+-------+
+|   Site Type  | Used | Fixed | Available | Util% |
++--------------+------+-------+-----------+-------+
+| BUFGCTRL     |    5 |     0 |        32 | 15.63 |
+| BUFIO        |    2 |     0 |        16 | 12.50 |
+|   BUFIO only |    2 |     0 |           |       |
+| MMCME2_ADV   |    2 |     0 |         4 | 50.00 |
+| PLLE2_ADV    |    0 |     0 |         4 |  0.00 |
+| BUFMRCE      |    0 |     0 |         8 |  0.00 |
+| BUFHCE       |    0 |     0 |        72 |  0.00 |
+| BUFR         |    2 |     0 |        16 | 12.50 |
++--------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+--------+
+|  Site Type  | Used | Fixed | Available |  Util% |
++-------------+------+-------+-----------+--------+
+| BSCANE2     |    1 |     0 |         4 |  25.00 |
+| CAPTUREE2   |    0 |     0 |         1 |   0.00 |
+| DNA_PORT    |    0 |     0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |   0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
+| ICAPE2      |    0 |     0 |         2 |   0.00 |
+| STARTUPE2   |    0 |     0 |         1 |   0.00 |
+| XADC        |    1 |     1 |         1 | 100.00 |
++-------------+------+-------+-----------+--------+
+
+
+8. Primitives
+-------------
+
++------------+-------+----------------------+
+|  Ref Name  |  Used |  Functional Category |
++------------+-------+----------------------+
+| FDRE       | 46573 |         Flop & Latch |
+| LUT6       | 10494 |                  LUT |
+| LUT3       | 10450 |                  LUT |
+| LUT5       |  6939 |                  LUT |
+| LUT4       |  6237 |                  LUT |
+| LUT2       |  4410 |                  LUT |
+| FDSE       |  1552 |         Flop & Latch |
+| CARRY4     |  1398 |           CarryLogic |
+| LUT1       |  1254 |                  LUT |
+| FDCE       |  1167 |         Flop & Latch |
+| SRL16E     |  1138 |   Distributed Memory |
+| MUXF7      |   919 |                MuxFx |
+| RAMD64E    |   704 |   Distributed Memory |
+| RAMD32     |   484 |   Distributed Memory |
+| SRLC32E    |   456 |   Distributed Memory |
+| FDPE       |   343 |         Flop & Latch |
+| RAMS32     |   160 |   Distributed Memory |
+| RAMS64E    |   144 |   Distributed Memory |
+| BIBUF      |   130 |                   IO |
+| MUXF8      |   121 |                MuxFx |
+| IBUF       |    89 |                   IO |
+| OBUFT      |    62 |                   IO |
+| RAMB36E1   |    61 |         Block Memory |
+| SRLC16E    |    21 |   Distributed Memory |
+| DSP48E1    |    18 |     Block Arithmetic |
+| OBUF       |    15 |                   IO |
+| OSERDESE2  |     8 |                   IO |
+| ISERDESE2  |     6 |                   IO |
+| BUFG       |     5 |                Clock |
+| RAMB18E1   |     4 |         Block Memory |
+| OBUFDS     |     4 |                   IO |
+| IBUFDS     |     4 |                   IO |
+| IDELAYE2   |     3 |                   IO |
+| AND2B1L    |     3 |               Others |
+| MMCME2_ADV |     2 |                Clock |
+| BUFR       |     2 |                Clock |
+| BUFIO      |     2 |                Clock |
+| XADC       |     1 |               Others |
+| PS7        |     1 | Specialized Resource |
+| IDELAYCTRL |     1 |                   IO |
+| BSCANE2    |     1 |               Others |
++------------+-------+----------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++----------------------------------+------+
+|             Ref Name             | Used |
++----------------------------------+------+
+| system_xlslice_1_0               |    1 |
+| system_xlslice_0_0               |    1 |
+| system_xlconcat_0_1              |    1 |
+| system_xlconcat_0_0              |    1 |
+| system_xbar_8                    |    1 |
+| system_xbar_7                    |    1 |
+| system_xbar_6                    |    1 |
+| system_xbar_5                    |    1 |
+| system_xbar_4                    |    1 |
+| system_xbar_3                    |    1 |
+| system_xbar_2                    |    1 |
+| system_xbar_1                    |    1 |
+| system_xbar_0                    |    1 |
+| system_xadc_0                    |    1 |
+| system_vtc_out_0                 |    1 |
+| system_vtc_in_0                  |    1 |
+| system_v_vid_in_axi4s_0_0        |    1 |
+| system_v_axi4s_vid_out_0_0       |    1 |
+| system_uartlite_0                |    1 |
+| system_trace_cntrl_64_0_0        |    1 |
+| system_trace_cntrl_32_0_0        |    1 |
+| system_timer_5_0                 |    1 |
+| system_timer_4_0                 |    1 |
+| system_timer_3_0                 |    1 |
+| system_timer_2_0                 |    1 |
+| system_timer_1_0                 |    1 |
+| system_timer_1                   |    1 |
+| system_timer_0_0                 |    1 |
+| system_timer_0                   |    1 |
+| system_tier2_xbar_2_0            |    1 |
+| system_tier2_xbar_1_0            |    1 |
+| system_tier2_xbar_0_0            |    1 |
+| system_system_interrupts_0       |    1 |
+| system_switches_gpio_0           |    1 |
+| system_spi_shared_0              |    1 |
+| system_spi_direct_0              |    1 |
+| system_spi_1                     |    1 |
+| system_spi_0                     |    1 |
+| system_s02_regslice_0            |    1 |
+| system_s01_regslice_2            |    1 |
+| system_s01_regslice_1            |    1 |
+| system_s01_regslice_0            |    1 |
+| system_s00_regslice_8            |    1 |
+| system_s00_regslice_7            |    1 |
+| system_s00_regslice_6            |    1 |
+| system_s00_regslice_5            |    1 |
+| system_s00_regslice_4            |    1 |
+| system_s00_regslice_3            |    1 |
+| system_s00_regslice_2            |    1 |
+| system_s00_regslice_1            |    1 |
+| system_s00_regslice_0            |    1 |
+| system_rst_ps7_0_fclk3_0         |    1 |
+| system_rst_ps7_0_fclk0_0         |    1 |
+| system_rst_clk_wiz_1_100M_2      |    1 |
+| system_rst_clk_wiz_1_100M_1      |    1 |
+| system_rst_clk_wiz_1_100M_0      |    1 |
+| system_rgbleds_gpio_0            |    1 |
+| system_rgb2dvi_0_0               |    1 |
+| system_ps7_0_0                   |    1 |
+| system_proc_sys_reset_pixelclk_0 |    1 |
+| system_proc_sys_reset_fclk1_0    |    1 |
+| system_pixel_unpack_0            |    1 |
+| system_pixel_pack_0              |    1 |
+| system_ow_master_top_1_0         |    1 |
+| system_mdm_1_0                   |    1 |
+| system_mb_iop_pmodb_reset_0      |    1 |
+| system_mb_iop_pmodb_intr_ack_0   |    1 |
+| system_mb_iop_pmoda_reset_0      |    1 |
+| system_mb_iop_pmoda_intr_ack_0   |    1 |
+| system_mb_iop_arduino_reset_0    |    1 |
+| system_mb_iop_arduino_intr_ack_0 |    1 |
+| system_mb_bram_ctrl_2            |    1 |
+| system_mb_bram_ctrl_1            |    1 |
+| system_mb_bram_ctrl_0            |    1 |
+| system_mb_2                      |    1 |
+| system_mb_1                      |    1 |
+| system_mb_0                      |    1 |
+| system_mb3_timers_interrupt_0    |    1 |
+| system_mb3_timer_pwm_0           |    1 |
+| system_mb3_timer_generate_0      |    1 |
+| system_mb3_timer_capture_7_0     |    1 |
+| system_mb3_timer_capture_6_0     |    1 |
+| system_mb3_timer_capture_5_0     |    1 |
+| system_mb3_timer_capture_4_0     |    1 |
+| system_mb3_timer_capture_3_0     |    1 |
+| system_mb3_timer_capture_2_0     |    1 |
+| system_mb3_timer_capture_1_0     |    1 |
+| system_mb3_timer_capture_0_0     |    1 |
+| system_m16_regslice_0            |    1 |
+| system_m15_regslice_0            |    1 |
+| system_m14_regslice_0            |    1 |
+| system_m13_regslice_0            |    1 |
+| system_m12_regslice_0            |    1 |
+| system_m11_regslice_0            |    1 |
+| system_m10_regslice_0            |    1 |
+| system_m09_regslice_2            |    1 |
+| system_m09_regslice_1            |    1 |
+| system_m09_regslice_0            |    1 |
+| system_m08_regslice_2            |    1 |
+| system_m08_regslice_1            |    1 |
+| system_m08_regslice_0            |    1 |
+| system_m07_regslice_4            |    1 |
+| system_m07_regslice_3            |    1 |
+| system_m07_regslice_2            |    1 |
+| system_m07_regslice_1            |    1 |
+| system_m07_regslice_0            |    1 |
+| system_m06_regslice_4            |    1 |
+| system_m06_regslice_3            |    1 |
+| system_m06_regslice_2            |    1 |
+| system_m06_regslice_1            |    1 |
+| system_m06_regslice_0            |    1 |
+| system_m05_regslice_4            |    1 |
+| system_m05_regslice_3            |    1 |
+| system_m05_regslice_2            |    1 |
+| system_m05_regslice_1            |    1 |
+| system_m05_regslice_0            |    1 |
+| system_m04_regslice_4            |    1 |
+| system_m04_regslice_3            |    1 |
+| system_m04_regslice_2            |    1 |
+| system_m04_regslice_1            |    1 |
+| system_m04_regslice_0            |    1 |
+| system_m03_regslice_5            |    1 |
+| system_m03_regslice_4            |    1 |
+| system_m03_regslice_3            |    1 |
+| system_m03_regslice_2            |    1 |
+| system_m03_regslice_1            |    1 |
+| system_m03_regslice_0            |    1 |
+| system_m02_regslice_5            |    1 |
+| system_m02_regslice_4            |    1 |
+| system_m02_regslice_3            |    1 |
+| system_m02_regslice_2            |    1 |
+| system_m02_regslice_1            |    1 |
+| system_m02_regslice_0            |    1 |
+| system_m01_regslice_5            |    1 |
+| system_m01_regslice_4            |    1 |
+| system_m01_regslice_3            |    1 |
+| system_m01_regslice_2            |    1 |
+| system_m01_regslice_1            |    1 |
+| system_m01_regslice_0            |    1 |
+| system_m00_regslice_8            |    1 |
+| system_m00_regslice_7            |    1 |
+| system_m00_regslice_6            |    1 |
+| system_m00_regslice_5            |    1 |
+| system_m00_regslice_4            |    1 |
+| system_m00_regslice_3            |    1 |
+| system_m00_regslice_2            |    1 |
+| system_m00_regslice_1            |    1 |
+| system_m00_regslice_0            |    1 |
+| system_lmb_bram_if_cntlr_2       |    1 |
+| system_lmb_bram_if_cntlr_1       |    1 |
+| system_lmb_bram_if_cntlr_0       |    1 |
+| system_lmb_bram_2                |    1 |
+| system_lmb_bram_1                |    1 |
+| system_lmb_bram_0                |    1 |
+| system_leds_gpio_0               |    1 |
+| system_iop_interrupts_0          |    1 |
+| system_io_switch_1               |    1 |
+| system_io_switch_0_0             |    1 |
+| system_io_switch_0               |    1 |
+| system_intr_concat_2             |    1 |
+| system_intr_concat_1             |    1 |
+| system_intr_concat_0             |    1 |
+| system_intr_2                    |    1 |
+| system_intr_1                    |    1 |
+| system_intr_0                    |    1 |
+| system_intc_2                    |    1 |
+| system_intc_1                    |    1 |
+| system_intc_0                    |    1 |
+| system_ilmb_v10_2                |    1 |
+| system_ilmb_v10_1                |    1 |
+| system_ilmb_v10_0                |    1 |
+| system_iic_direct_0              |    1 |
+| system_iic_1                     |    1 |
+| system_iic_0                     |    1 |
+| system_hdmi_out_hpd_video_0      |    1 |
+| system_gpio_1                    |    1 |
+| system_gpio_0                    |    1 |
+| system_dvi2rgb_0_0               |    1 |
+| system_dlmb_v10_2                |    1 |
+| system_dlmb_v10_1                |    1 |
+| system_dlmb_v10_0                |    1 |
+| system_dff_en_reset_vector_0_2   |    1 |
+| system_dff_en_reset_vector_0_1   |    1 |
+| system_dff_en_reset_vector_0_0   |    1 |
+| system_design1_0_0               |    1 |
+| system_constant_tkeep_tstrb_1    |    1 |
+| system_constant_tkeep_tstrb_0    |    1 |
+| system_concat_pmoda_0            |    1 |
+| system_concat_interrupts_0       |    1 |
+| system_concat_arduino_0          |    1 |
+| system_color_swap_0_1            |    1 |
+| system_color_swap_0_0            |    1 |
+| system_color_convert_1           |    1 |
+| system_color_convert_0           |    1 |
+| system_ck_gpio_0                 |    1 |
+| system_btns_gpio_0               |    1 |
+| system_axis_register_slice_0_1   |    1 |
+| system_axis_register_slice_0_0   |    1 |
+| system_axis_data_fifo_0_1        |    1 |
+| system_axis_data_fifo_0_0        |    1 |
+| system_axi_vdma_0                |    1 |
+| system_axi_gpio_hdmiin_0         |    1 |
+| system_axi_dynclk_0              |    1 |
+| system_axi_dma_0_1               |    1 |
+| system_axi_dma_0_0               |    1 |
+| system_auto_us_1                 |    1 |
+| system_auto_us_0                 |    1 |
+| system_auto_pc_9                 |    1 |
+| system_auto_pc_8                 |    1 |
+| system_auto_pc_7                 |    1 |
+| system_auto_pc_6                 |    1 |
+| system_auto_pc_5                 |    1 |
+| system_auto_pc_4                 |    1 |
+| system_auto_pc_3                 |    1 |
+| system_auto_pc_2                 |    1 |
+| system_auto_pc_12                |    1 |
+| system_auto_pc_11                |    1 |
+| system_auto_pc_10                |    1 |
+| system_auto_pc_1                 |    1 |
+| system_auto_pc_0                 |    1 |
+| system_auto_cc_3                 |    1 |
+| system_auto_cc_2                 |    1 |
+| system_auto_cc_1                 |    1 |
+| system_auto_cc_0                 |    1 |
+| system_audio_path_sel_0          |    1 |
+| system_audio_direct_0_0          |    1 |
+| system_arduino_gpio_0            |    1 |
++----------------------------------+------+
+
+
